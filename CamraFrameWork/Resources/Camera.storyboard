@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PJO-2W-JSk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25" y="82"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="S1i-9w-Zmf">
+            <objects>
+                <viewController storyboardIdentifier="CameraViewController" id="PJO-2W-JSk" customClass="CameraViewController" customModule="CamraFrameWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tdr-3K-LG5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="msJ-Oi-GXF"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PQw-l2-ctp">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="92W-Tb-WnL">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iYI-Lb-WOr">
+                                <rect key="frame" x="369.5" y="11" width="24.5" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="camera" catalog="system"/>
+                                <connections>
+                                    <action selector="takePhotoWithSender:" destination="PJO-2W-JSk" eventType="touchUpInside" id="5HU-32-dMT"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0xZ-S3-Ksc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110.144927536232" y="741.29464285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lb3-af-QS5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QhX-wA-wb3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HEY-ng-7qm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PJO-2W-JSk" kind="relationship" relationship="rootViewController" id="p78-Ap-9Yw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kp0-5A-pSG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-117" y="741"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="l7K-CQ-Gob">
+            <objects>
+                <viewController storyboardIdentifier="PhotoViewController" id="WAB-u4-rUr" customClass="PhotoViewController" customModule="CamraFrameWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0k-vp-bL7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0T-GQ-I0r">
+                                <rect key="frame" x="15" y="44" width="93" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ReCapture"/>
+                                <connections>
+                                    <action selector="recaptureImage" destination="WAB-u4-rUr" eventType="touchUpInside" id="nNM-dG-nfk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlv-ph-rit">
+                                <rect key="frame" x="321" y="44" width="78" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Approve"/>
+                                <connections>
+                                    <action selector="approveImage" destination="WAB-u4-rUr" eventType="touchUpInside" id="y8t-Br-Uho"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ts0-eT-6H4">
+                                <rect key="frame" x="0.0" y="119" width="414" height="777"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g6W-Ri-z8i"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ts0-eT-6H4" firstAttribute="leading" secondItem="g6W-Ri-z8i" secondAttribute="leading" id="3RN-du-AY1"/>
+                            <constraint firstItem="g6W-Ri-z8i" firstAttribute="trailing" secondItem="dlv-ph-rit" secondAttribute="trailing" constant="15" id="L6d-rp-WFs"/>
+                            <constraint firstItem="dlv-ph-rit" firstAttribute="centerY" secondItem="F0T-GQ-I0r" secondAttribute="centerY" id="Y66-ls-MRw"/>
+                            <constraint firstItem="F0T-GQ-I0r" firstAttribute="leading" secondItem="g6W-Ri-z8i" secondAttribute="leading" constant="15" id="gE0-j7-knK"/>
+                            <constraint firstItem="ts0-eT-6H4" firstAttribute="trailing" secondItem="g6W-Ri-z8i" secondAttribute="trailing" id="h86-f8-3cN"/>
+                            <constraint firstAttribute="bottom" secondItem="ts0-eT-6H4" secondAttribute="bottom" id="qd2-HM-Sma"/>
+                            <constraint firstItem="ts0-eT-6H4" firstAttribute="top" secondItem="F0T-GQ-I0r" secondAttribute="bottom" constant="44" id="vU9-WG-dv6"/>
+                            <constraint firstItem="F0T-GQ-I0r" firstAttribute="top" secondItem="g6W-Ri-z8i" secondAttribute="top" id="zMs-iX-7Rc"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="ts0-eT-6H4" id="l6H-Xp-16J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VNh-8G-Awz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="741"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
